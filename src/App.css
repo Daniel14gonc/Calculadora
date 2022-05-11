@@ -1,0 +1,72 @@
+.container {
+  background-color: rgb(45, 45, 45);
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container-calcu {
+  background-color: white;
+  height: 650px;
+  width: 360px;
+  display: flex;
+  flex-direction: column;
+}
+
+.pantalla {
+  flex-grow: 0.5;
+  width: 100%;
+  background-color: black;
+  display: flex;
+  align-items: flex-end;
+  color: white;
+  justify-content: flex-end;
+  font-size: 60px;
+}
+
+.pantalla > p {
+  margin-bottom: 0px;
+  margin-right: 20px;
+}
+
+.botones {
+  flex-grow: 1.3;
+  width: 100%;
+  background-color: black;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 10px;
+}
+
+.boton {
+  background-color: #333333;
+  border-radius: 100%;
+  margin-left: 5px;
+  margin-right: 5px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 25px;
+  font-weight: normal;
+  cursor: pointer;
+}
+
+.special-button {
+  background-color: #333333;
+  border-radius: 50px;
+  margin-left: 5px;
+  margin-right: 5px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 25px;
+  font-weight: normal;
+  grid-column: span 2; 
+  cursor: pointer;
+}
