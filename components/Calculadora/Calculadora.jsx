@@ -38,8 +38,8 @@ const Calculadora = () => {
   const isResult = useRef(false)
   const change = (value) => {
     if ('0123456789.'.includes(value)) {
-      if (pantalla === '0' || operator.current || pantalla === 'Error' || pantalla === 'NaN' || pantalla === 'Infinity') setPantalla(value)
-      else if ((pantalla + value).length < 9) {
+      if (pantalla === '0' || operator.current || pantalla === 'Error' || pantalla === 'NaN' || pantalla === 'Infinity') setPantalla(value.toString())
+      else if ((pantalla + value).length <= 9) {
         setPantalla(pantalla + value)
       }
       if (isResult.current === true) {
@@ -76,8 +76,11 @@ const Calculadora = () => {
         isResult.current = false
       }
     } else if (value === '+/-') {
-      const newValue = parseFloat(pantalla) * -1
-      setPantalla(newValue.toString())
+      console.log(pantalla.toString().length)
+      if (pantalla.toString().length <= 8) {
+        const newValue = parseFloat(pantalla) * -1
+        setPantalla(newValue.toString())
+      }
     }
   }
   return (
